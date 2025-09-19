@@ -11,32 +11,25 @@ declare global {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.mermaid) {
+        const getMermaidThemeVariables = () => {
+            const style = getComputedStyle(document.body);
+            return {
+                'primaryColor': style.getPropertyValue('--mermaid-primary-color').trim(),
+                'primaryTextColor': style.getPropertyValue('--mermaid-primary-text-color').trim(),
+                'primaryBorderColor': style.getPropertyValue('--mermaid-primary-border-color').trim(),
+                'lineColor': style.getPropertyValue('--mermaid-line-color').trim(),
+                'secondaryColor': style.getPropertyValue('--mermaid-secondary-color').trim(),
+                'tertiaryColor': style.getPropertyValue('--mermaid-tertiary-color').trim(),
+            };
+        };
+
         const theme = document.body.dataset.theme;
-
-        const lightThemeVars = {
-            'primaryColor': '#f8f9fa',
-            'primaryTextColor': '#212529',
-            'primaryBorderColor': '#007bff',
-            'lineColor': '#495057',
-            'secondaryColor': '#ffffff',
-            'tertiaryColor': '#f8f9fa'
-        };
-
-        const darkThemeVars = {
-            'primaryColor': '#112240',
-            'primaryTextColor': '#e6f1ff',
-            'primaryBorderColor': '#64ffda',
-            'lineColor': '#a8b2d1',
-            'secondaryColor': '#0a192f',
-            'tertiaryColor': '#112240'
-        };
-
         window.mermaid.initialize({
             startOnLoad: true,
             theme: theme === 'dark' ? 'dark' : 'default',
             securityLevel: 'loose',
             fontFamily: "'Noto Sans TC', sans-serif",
-            themeVariables: theme === 'dark' ? darkThemeVars : lightThemeVars
+            themeVariables: getMermaidThemeVariables()
         });
     }
 });

@@ -21,6 +21,14 @@
     --play-overlay-hover-bg: rgba(0, 0, 0, 0.2);
     --play-overlay-icon: rgba(255, 255, 255, 0.9);
     --rationale-bg: rgba(0, 123, 255, 0.05);
+
+    /* Mermaid Light Theme */
+    --mermaid-primary-color: #f8f9fa;
+    --mermaid-primary-text-color: #212529;
+    --mermaid-primary-border-color: #007bff;
+    --mermaid-line-color: #495057;
+    --mermaid-secondary-color: #ffffff;
+    --mermaid-tertiary-color: #f8f9fa;
 }
 
 [data-theme='dark'] {
@@ -42,6 +50,14 @@
     --play-overlay-hover-bg: rgba(10, 25, 47, 0.2);
     --play-overlay-icon: rgba(255, 255, 255, 0.8);
     --rationale-bg: rgba(17, 34, 64, 0.5);
+
+    /* Mermaid Dark Theme */
+    --mermaid-primary-color: #112240;
+    --mermaid-primary-text-color: #e6f1ff;
+    --mermaid-primary-border-color: #64ffda;
+    --mermaid-line-color: #a8b2d1;
+    --mermaid-secondary-color: #0a192f;
+    --mermaid-tertiary-color: #112240;
 }
 
 *,
