@@ -1,0 +1,5 @@
+{
+  "name": "Trading Strategy Visualizer",
+  "description": "A rich HTML visualization of an options trading strategy for market crashes.",
+  "requestFramePermissions": []
+}
